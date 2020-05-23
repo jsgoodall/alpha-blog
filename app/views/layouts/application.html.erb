@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta name="generator" content=
-  "HTML Tidy for HTML5 for Linux version 5.2.0">
-  <title>
-  AlphaBlog</title><%= csrf_meta_tags %><%= csp_meta_tag %><%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %><%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for HTML5 for Linux version 5.2.0">
+    <title>
+      AlphaBlog</title><%= csrf_meta_tags %><%= csp_meta_tag %><%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %><%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body class="d-flex flex-column">
   <%= render 'layouts/navigation' %>
-  <%= render 'layouts/messages' %>
-  <%= yield %>
+  <div id="page-content">
+    <%= render 'layouts/messages' %>
+    <%= yield %>
+  </div>
   <%= render 'layouts/footer' %>
 </body>
 </html>
